@@ -145,6 +145,73 @@ export function buildAstroPost({ markdown, sourcePath, defaultAuthor = 'LeoninCS
   };
 }
 
+export function transformAstroLinksToObsidian(markdown, slug) {
+  return markdown.replace(
+    /!\[([^\]]*)\]\(\/blog-assets\/([^/)]+)\/([^)]+)\)/g,
+    (match, rawAlt, rawSlug, rawFile) => {
+      if (rawSlug !== slug) return match;
+
+      const file = decodePath(rawFile);
+      const alt = rawAlt.trim();
+      const target = `${slug}/${file}`;
+      return alt ? `![[${target}|${alt}]]` : `![[${target}]]`;
+    }
+  );
+}
+
+export function extractAstroAssets(markdown, slug) {
+  const assets = new Map();
+  const coverMatch = markdown.match(/^cover:\s*["']?\/blog-assets\/([^/\n]+)\/([^"'\n]+)["']?/m);
+
+  if (coverMatch && coverMatch[1] === slug) {
+    const file = decodePath(coverMatch[2]);
+    assets.set(`${slug}/${file}`, { sourcePath: `${slug}/${file}`, vaultPath: `${slug}/${file}` });
+  }
+
+  const pattern = /!\[[^\]]*\]\(\/blog-assets\/([^/)]+)\/([^)]+)\)/g;
+  let match;
+
+  while ((match = pattern.exec(markdown))) {
+    if (match[1] !== slug) continue;
+    const file = decodePath(match[2]);
+    assets.set(`${slug}/${file}`, { sourcePath: `${slug}/${file}`, vaultPath: `${slug}/${file}` });
+  }
+
+  return [...assets.values()];
+}
+
+export function buildObsidianNote({ markdown, sourcePath }) {
+  const { data, body } = parseFrontmatter(markdown);
+  const slug = basename(sourcePath, extname(sourcePath));
+  const title = String(data.title || slug);
+  const cover = data.cover ? coverToObsidianPath(String(data.cover), slug) : '';
+  const transformedBody = transformAstroLinksToObsidian(body, slug).trim();
+  const assets = extractAstroAssets(markdown, slug);
+
+  const output = [
+    '---',
+    'publish: true',
+    `title: ${quote(title)}`,
+    `slug: ${quote(slug)}`,
+    `description: ${quote(data.description || '')}`,
+    `date: ${quote(data.date || currentDate())}`,
+    `author: ${quote(data.author || 'LeoninCS')}`,
+    `cover: ${quote(cover)}`,
+    `categories: ${JSON.stringify(normalizeList(data.categories))}`,
+    `tags: ${JSON.stringify(normalizeList(data.tags))}`,
+    '---',
+    '',
+    transformedBody,
+    ''
+  ].join('\n');
+
+  return {
+    noteName: `${title}.md`,
+    markdown: output,
+    assets
+  };
+}
+
 function firstParagraph(body) {
   return body
     .replace(/!\[\[[^\]]+\]\]/g, '')
@@ -172,6 +239,16 @@ function quote(value) {
 
 function encodePath(file) {
   return file.split('/').map(encodeURIComponent).join('/');
+}
+
+function decodePath(file) {
+  return file.split('/').map((part) => decodeURIComponent(part)).join('/');
+}
+
+function coverToObsidianPath(cover, slug) {
+  const prefix = `/blog-assets/${slug}/`;
+  if (!cover.startsWith(prefix)) return cover;
+  return `${slug}/${decodePath(cover.slice(prefix.length))}`;
 }
 
 function currentDate() {

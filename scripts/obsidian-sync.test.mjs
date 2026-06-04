@@ -2,11 +2,13 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 
 import {
+  buildObsidianNote,
   buildAstroPost,
   extractObsidianAssets,
   parseFrontmatter,
   shouldPublish,
   slugify,
+  transformAstroLinksToObsidian,
   transformObsidianLinks
 } from './obsidian-sync-lib.mjs';
 
@@ -84,4 +86,39 @@ test('builds Astro post frontmatter with defaults', () => {
   assert.match(result.markdown, /description: "第一段作为摘要内容。"/);
   assert.match(result.markdown, /cover: "\/blog-assets\/测试文章\/cover\.png"/);
   assert.match(result.markdown, /!\[cover\]\(\/blog-assets\/测试文章\/cover\.png\)/);
+});
+
+test('builds Obsidian note from Astro post and maps hosted assets', () => {
+  const markdown = [
+    '---',
+    'title: "旧文章"',
+    'description: "旧博客文章"',
+    'date: "2025-09-30"',
+    'author: "LeoninCS"',
+    'cover: "/blog-assets/old-post/face.png"',
+    'categories: ["技术"]',
+    'tags: ["Astro", "Obsidian"]',
+    '---',
+    '',
+    '# 旧文章',
+    '',
+    '![流程图](/blog-assets/old-post/demo%20chart.png)'
+  ].join('\n');
+
+  const transformed = transformAstroLinksToObsidian(markdown, 'old-post');
+  const result = buildObsidianNote({
+    markdown,
+    sourcePath: 'src/content/blog/old-post.md'
+  });
+
+  assert.match(transformed, /!\[\[old-post\/demo chart\.png\|流程图\]\]/);
+  assert.equal(result.noteName, '旧文章.md');
+  assert.deepEqual(result.assets, [
+    { sourcePath: 'old-post/face.png', vaultPath: 'old-post/face.png' },
+    { sourcePath: 'old-post/demo chart.png', vaultPath: 'old-post/demo chart.png' }
+  ]);
+  assert.match(result.markdown, /publish: true/);
+  assert.match(result.markdown, /slug: "old-post"/);
+  assert.match(result.markdown, /cover: "old-post\/face\.png"/);
+  assert.match(result.markdown, /!\[\[old-post\/demo chart\.png\|流程图\]\]/);
 });
