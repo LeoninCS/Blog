@@ -725,6 +725,22 @@ video {
   margin: 1.6em auto;
 }
 
+.comments {
+  border-top: 1px solid var(--hairline);
+  margin-top: 56px;
+  max-width: var(--reading-width);
+  padding-top: 28px;
+}
+
+.comments h2 {
+  color: hsl(var(--theme-text));
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 560;
+  line-height: 1.2;
+  margin: 0 0 18px;
+}
+
 .site-footer {
   align-items: center;
   border-top: 1px solid var(--hairline);
