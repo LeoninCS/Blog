@@ -1,0 +1,16 @@
+---
+import WorkList from '../components/WorkList.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="作品" description="LeoninCS’s Blog 的项目与作品。">
+  <section class="archive-head">
+    <div class="section-label">作品</div>
+    <h1>作品</h1>
+    <p>这里整理我正在维护、学习或复盘的项目与内容系列。</p>
+  </section>
+
+  <section class="work" aria-label="作品列表">
+    <WorkList />
+  </section>
+</BaseLayout>

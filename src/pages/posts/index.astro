@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostTimeline from '../../components/PostTimeline.astro';
+import { getSortedPosts } from '../../lib/posts';
+
+const posts = await getSortedPosts();
+---
+
+<BaseLayout title="文章" description="LeoninCS’s Blog 文章归档。">
+  <section class="archive-head">
+    <div class="section-label">文章</div>
+    <h1>全部文章</h1>
+    <p>学习笔记、项目实践和技术复盘都收在这里。</p>
+  </section>
+  <PostTimeline posts={posts} />
+</BaseLayout>

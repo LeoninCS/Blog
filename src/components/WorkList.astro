@@ -1,0 +1,43 @@
+---
+const works = [
+  {
+    href: 'https://github.com/LeoninCS/Go-gateway',
+    name: 'Go-gateway',
+    stack: 'Golang · API 网关 · 微服务',
+    badge: '项目',
+    description: '一个用于学习和实践微服务网关核心能力的项目，覆盖路由转发、负载均衡、服务管理等模块。',
+    external: true
+  },
+  {
+    href: 'https://github.com/LeoninCS/30daysGateway',
+    name: '30daysGateway',
+    stack: '文档 · 网关 · 代码解析',
+    badge: '系列',
+    description: '把网关开发拆成 30 天学习路径，配套技术文档和代码讲解，适合循序渐进复盘。',
+    external: true
+  },
+  {
+    href: '/posts/cpp-algorithm-templates/',
+    name: 'C++ 算法模板',
+    stack: 'ACM · ICPC · 模板',
+    badge: '笔记',
+    description: '面向竞赛训练的常用 C++ 模板和例题整理，偏个人复习与区域赛准备。',
+    external: false
+  }
+];
+---
+
+<ul class="work-list">
+  {works.map((item, index) => (
+    <li style={`--i:${index + 1}`}>
+      <a href={item.href} rel={item.external ? 'noreferrer' : undefined} target={item.external ? '_blank' : undefined}>
+        <div class="head">
+          <span class="name">{item.name}</span>
+          <span class="stack">{item.stack}</span>
+          <span class="badge">{item.badge}</span>
+        </div>
+        <p>{item.description}</p>
+      </a>
+    </li>
+  ))}
+</ul>

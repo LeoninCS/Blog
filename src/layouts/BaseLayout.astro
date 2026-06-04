@@ -1,0 +1,66 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const siteTitle = 'LeoninCS’s Blog';
+const { title = siteTitle, description = '学习记录、技术分享、偶尔发些日常生活。' } = Astro.props;
+const pageTitle = title === siteTitle ? siteTitle : `${title} | ${siteTitle}`;
+---
+
+<!doctype html>
+<html lang="zh-CN" class="scroll-smooth">
+  <head>
+    <script is:inline>
+      (() => {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.theme = stored || (prefersDark ? 'dark' : 'light');
+        } catch {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+      addEventListener('DOMContentLoaded', () => {
+        requestAnimationFrame(() => document.documentElement.classList.add('theme-ready'));
+      });
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={description} />
+    <meta name="author" content="LeoninCS" />
+    <meta name="theme-color" content="#f6f1e6" />
+    <link rel="icon" type="image/png" sizes="100x100" href="/icon.png?v=seal" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=seal" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=seal" />
+    <link rel="alternate" type="application/rss+xml" title="LeoninCS’s Blog" href="/rss.xml" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">跳到正文</a>
+    <div class="wrap">
+      <Header />
+      <main id="main">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+    <script is:inline>
+      const root = document.documentElement;
+      const toggle = document.getElementById('theme-toggle');
+      toggle?.addEventListener('click', () => {
+        const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        root.dataset.theme = theme;
+        try {
+          localStorage.setItem('theme', theme);
+        } catch {}
+      });
+    </script>
+  </body>
+</html>

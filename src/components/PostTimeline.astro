@@ -1,0 +1,46 @@
+---
+import type { BlogPost } from '../lib/posts';
+import { formatDate, formatMonth, getPostUrl } from '../lib/posts';
+
+interface Props {
+  posts: BlogPost[];
+  featured?: boolean;
+  limit?: number;
+}
+
+const { posts, featured = false, limit } = Astro.props;
+const visiblePosts = typeof limit === 'number' ? posts.slice(0, limit) : posts;
+---
+
+<div class="timeline">
+  {visiblePosts.map((post, index) => {
+    const isFeatured = featured && index === 0;
+    return (
+      <a href={getPostUrl(post)} class:list={['post', { featured: isFeatured }]} style={`--i:${index}`}>
+        <div class="post-rail">
+          <time class="post-date" datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+          <span class="post-dot" aria-hidden="true"></span>
+        </div>
+        <div class="post-body">
+          {isFeatured && <div class="post-stamp">最新 · {formatMonth(post.data.date)}</div>}
+          {isFeatured ? <h2 class="post-title">{post.data.title}</h2> : <h3 class="post-title">{post.data.title}</h3>}
+          {isFeatured ? (
+            <p class="post-excerpt">{post.data.description}</p>
+          ) : (
+            <p class="post-preview">{post.data.description}</p>
+          )}
+          {isFeatured && (
+            <div class="post-meta">
+              {(post.data.categories.length ? post.data.categories : post.data.tags).slice(0, 2).map((item, itemIndex) => (
+                <>
+                  {itemIndex > 0 && <span class="dot">·</span>}
+                  <span>{item}</span>
+                </>
+              ))}
+            </div>
+          )}
+        </div>
+      </a>
+    );
+  })}
+</div>

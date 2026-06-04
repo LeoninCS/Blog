@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostTimeline from '../components/PostTimeline.astro';
+import WorkList from '../components/WorkList.astro';
+import { getSortedPosts } from '../lib/posts';
+
+const posts = await getSortedPosts();
+const socialLinks = [
+  {
+    href: 'https://xianchaoqian.com',
+    label: 'Homepage'
+  },
+  {
+    href: 'https://github.com/LeoninCS',
+    label: 'GitHub'
+  },
+  {
+    href: 'https://space.bilibili.com/491359383',
+    label: 'Bilibili'
+  },
+  {
+    href: 'https://www.xiaohongshu.com/user/profile/69248f0b000000003702b8d7?xsec_token=YBstH3OwE19B9v53xghZrydstBVVWI2wXWq8lwjrH9F7Q%3D&xsec_source=app_share&shareRedId=OD80NDtLNEs2NzUyOTgwNjk6OTlGPUpA&apptime=1777365113&share_id=8b97234768b843c1a3f733ca5829a418&share_channel=copy_link&appuid=69248f0b000000003702b8d7&xhsshare=CopyLink',
+    label: 'Redbook'
+  },
+  {
+    href: 'https://www.instagram.com/forever_mvp0?igsh=MXhnNjA3ZjFkbTZwbg==',
+    label: 'Instagram'
+  },
+  {
+    href: 'mailto:xianchaoqian@foxmail.com',
+    label: 'Email'
+  }
+];
+---
+
+<BaseLayout>
+  <section class="hero">
+    <p>Hi，这里是布洛克琴，技术ID为LeoninCS。欢迎访问我的Blog，这里记录我了我的学习笔记、技术实践和项目复盘，也会偶尔写一些生活观察。希望我的Blog可以为你带来价值！</p>
+    <div class="socials" aria-label="社交链接">
+      {socialLinks.map((item, index) => (
+        <>
+          {index > 0 && <span class="sep">·</span>}
+          <a href={item.href} rel="noreferrer" target={item.href.startsWith('mailto:') ? undefined : '_blank'}>
+            {item.label}
+          </a>
+        </>
+      ))}
+    </div>
+  </section>
+
+  <section class="writing" aria-labelledby="writing-label">
+    <div class="section-label" id="writing-label">写作</div>
+    <PostTimeline posts={posts} featured limit={5} />
+    <div class="archive-link" style={`--i:${Math.min(posts.length, 5)}`}>
+      <a href="/posts/">查看全部 {posts.length} 篇文章 →</a>
+    </div>
+  </section>
+
+  <section class="work" id="showcase" aria-labelledby="work-label">
+    <div class="section-label" id="work-label">作品</div>
+    <WorkList />
+  </section>
+</BaseLayout>
