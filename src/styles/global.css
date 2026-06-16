@@ -719,6 +719,21 @@ video {
   padding: 0;
 }
 
+.post-article .mermaid {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  margin: 1.7em 0;
+  overflow-x: auto;
+  padding: 18px;
+}
+
+.post-article .mermaid svg {
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
 .post-article img {
   border: 1px solid var(--hairline);
   border-radius: 4px;

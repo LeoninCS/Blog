@@ -38,4 +38,29 @@ const metaItems = [...post.data.categories, ...post.data.tags.filter((tag) => !p
     </div>
     <Comments />
   </article>
+
+  <script>
+    const diagrams = document.querySelectorAll<HTMLPreElement>('.post-article pre[data-language="mermaid"]');
+
+    if (diagrams.length > 0) {
+      const { default: mermaid } = await import('mermaid');
+
+      mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: 'strict',
+        theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'base'
+      });
+
+      diagrams.forEach((pre) => {
+        const diagram = document.createElement('div');
+        diagram.className = 'mermaid';
+        diagram.textContent = pre.textContent?.trim() ?? '';
+        pre.replaceWith(diagram);
+      });
+
+      await mermaid.run({
+        querySelector: '.post-article .mermaid'
+      });
+    }
+  </script>
 </BaseLayout>
