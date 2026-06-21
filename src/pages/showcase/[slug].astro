@@ -51,7 +51,11 @@ const chapters = (await getCollection('workChapter'))
       </ol>
 
       <p class="source-link">
-        原始来源：<a href={work.data.sourceUrl} rel="noreferrer" target="_blank">{work.data.sourceUrl}</a>
+        来源：{work.data.sourceUrl.startsWith('http') ? (
+          <a href={work.data.sourceUrl} rel="noreferrer" target="_blank">{work.data.sourceUrl}</a>
+        ) : (
+          <span>{work.data.sourceUrl}</span>
+        )}
       </p>
     </div>
   </article>

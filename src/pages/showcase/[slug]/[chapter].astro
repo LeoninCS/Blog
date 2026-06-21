@@ -52,7 +52,11 @@ const next = currentIndex >= 0 && currentIndex < siblings.length - 1 ? siblings[
       </nav>
 
       <p class="source-link">
-        原始来源：<a href={chapter.data.sourceUrl} rel="noreferrer" target="_blank">{chapter.data.sourceUrl}</a>
+        来源：{chapter.data.sourceUrl.startsWith('http') ? (
+          <a href={chapter.data.sourceUrl} rel="noreferrer" target="_blank">{chapter.data.sourceUrl}</a>
+        ) : (
+          <span>{chapter.data.sourceUrl}</span>
+        )}
       </p>
     </div>
   </article>

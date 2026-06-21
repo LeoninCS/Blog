@@ -20,7 +20,7 @@ const work = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    sourceUrl: z.string().url(),
+    sourceUrl: z.string(),
     stack: z.string(),
     badge: z.string(),
     order: z.number(),
@@ -35,7 +35,7 @@ const workChapter = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    sourceUrl: z.string().url(),
+    sourceUrl: z.string(),
     workSlug: z.string(),
     workTitle: z.string(),
     chapterSlug: z.string(),
