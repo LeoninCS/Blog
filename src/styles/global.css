@@ -797,6 +797,43 @@ video {
   width: min(100%, 960px);
 }
 
+.imported-epub-document {
+  font-family: var(--font-serif);
+}
+
+.imported-epub-document p {
+  margin: 1em 0;
+}
+
+.imported-epub-document :where(h1, h2, h3) {
+  text-align: center;
+}
+
+.imported-epub-document :where(img, svg) {
+  display: block;
+  height: auto;
+  max-height: 78vh;
+  object-fit: contain;
+}
+
+.imported-epub-document .sgc-toc-title {
+  color: hsl(var(--theme-text));
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 560;
+  margin: 1.5em 0 1em;
+  text-align: center;
+}
+
+.imported-epub-document .sgc-toc-level,
+.imported-epub-document .sgc-toc-level1 {
+  margin: 0.4em 0;
+}
+
+.imported-epub-document .sgc-toc-level1 {
+  padding-left: 1.2em;
+}
+
 .chapter-nav {
   border-top: 1px solid var(--hairline);
   display: grid;
