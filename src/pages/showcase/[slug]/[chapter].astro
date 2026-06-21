@@ -1,0 +1,59 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const chapters = await getCollection('workChapter');
+
+  return chapters.map((chapter) => ({
+    params: {
+      slug: chapter.data.workSlug,
+      chapter: chapter.data.chapterSlug
+    },
+    props: { chapter }
+  }));
+}
+
+const { chapter } = Astro.props;
+const { Content } = await render(chapter);
+const siblings = (await getCollection('workChapter'))
+  .filter((item) => item.data.workSlug === chapter.data.workSlug)
+  .sort((a, b) => a.data.order - b.data.order);
+const currentIndex = siblings.findIndex((item) => item.id === chapter.id);
+const previous = currentIndex > 0 ? siblings[currentIndex - 1] : undefined;
+const next = currentIndex >= 0 && currentIndex < siblings.length - 1 ? siblings[currentIndex + 1] : undefined;
+---
+
+<BaseLayout title={chapter.data.title} description={chapter.data.description}>
+  <article class="post-main">
+    <header class="post-header">
+      <a class="back-link" href={`/showcase/${chapter.data.workSlug}/`}>← {chapter.data.workTitle}</a>
+      <h1>{chapter.data.title}</h1>
+      <p>{chapter.data.description}</p>
+      <div class="post-detail-meta">
+        <span>{chapter.data.workTitle}</span>
+        <span>·</span>
+        <span>第 {chapter.data.order} 章</span>
+      </div>
+    </header>
+
+    <div class="rule"></div>
+
+    <div class="post-article">
+      <Content />
+
+      <nav class="chapter-nav" aria-label="章节导航">
+        {previous ? (
+          <a href={`/showcase/${previous.data.workSlug}/${previous.data.chapterSlug}/`}>← {previous.data.title}</a>
+        ) : (
+          <span></span>
+        )}
+        {next && <a href={`/showcase/${next.data.workSlug}/${next.data.chapterSlug}/`}>{next.data.title} →</a>}
+      </nav>
+
+      <p class="source-link">
+        原始来源：<a href={chapter.data.sourceUrl} rel="noreferrer" target="_blank">{chapter.data.sourceUrl}</a>
+      </p>
+    </div>
+  </article>
+</BaseLayout>

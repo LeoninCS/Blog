@@ -740,6 +740,53 @@ video {
   margin: 1.6em auto;
 }
 
+.chapter-list {
+  list-style: decimal-leading-zero;
+}
+
+.chapter-list li {
+  margin-bottom: 0.55em;
+  padding-left: 0.3em;
+}
+
+.chapter-list a {
+  color: hsl(var(--theme-text));
+  text-decoration-color: hsl(var(--theme-text) / 0.22);
+  text-underline-offset: 3px;
+}
+
+.chapter-list a:hover {
+  color: hsl(var(--theme-accent));
+}
+
+.chapter-nav {
+  border-top: 1px solid var(--hairline);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 48px;
+  padding-top: 24px;
+}
+
+.chapter-nav a {
+  color: hsl(var(--theme-text));
+  font-family: var(--font-sans);
+  line-height: 1.45;
+  text-decoration-color: hsl(var(--theme-text) / 0.22);
+  text-underline-offset: 3px;
+}
+
+.chapter-nav a:last-child {
+  text-align: right;
+}
+
+.source-link {
+  color: hsl(var(--theme-text-muted));
+  font-size: 14px;
+  margin-top: 28px;
+  overflow-wrap: anywhere;
+}
+
 .comments {
   border-top: 1px solid var(--hairline);
   margin-top: 56px;

@@ -1,0 +1,58 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const works = await getCollection('work');
+
+  return works.map((work) => ({
+    params: { slug: work.id.replace(/\.md$/, '') },
+    props: { work }
+  }));
+}
+
+const { work } = Astro.props;
+const { Content } = await render(work);
+const slug = work.id.replace(/\.md$/, '');
+const chapters = (await getCollection('workChapter'))
+  .filter((chapter) => chapter.data.workSlug === slug)
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title={work.data.title} description={work.data.description}>
+  <article class="post-main">
+    <header class="post-header">
+      <a class="back-link" href="/showcase/">← 全部作品</a>
+      <h1>{work.data.title}</h1>
+      <p>{work.data.description}</p>
+      <div class="post-detail-meta">
+        <span>{work.data.stack}</span>
+        <span>·</span>
+        <span>{work.data.chapterCount} 个章节</span>
+      </div>
+      <div class="tag-row">
+        <span>{work.data.badge}</span>
+        {work.data.tags.slice(0, 4).map((tag) => <span>{tag}</span>)}
+      </div>
+    </header>
+
+    <div class="rule"></div>
+
+    <div class="post-article">
+      <Content />
+
+      <h2>章节目录</h2>
+      <ol class="chapter-list">
+        {chapters.map((chapter) => (
+          <li>
+            <a href={`/showcase/${slug}/${chapter.data.chapterSlug}/`}>{chapter.data.title}</a>
+          </li>
+        ))}
+      </ol>
+
+      <p class="source-link">
+        原始来源：<a href={work.data.sourceUrl} rel="noreferrer" target="_blank">{work.data.sourceUrl}</a>
+      </p>
+    </div>
+  </article>
+</BaseLayout>
