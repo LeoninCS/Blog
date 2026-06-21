@@ -1,6 +1,7 @@
 ---
 title: "第7章 链接"
 description: "第7章 APTER 浒 E拦 链接（linking）是将各种代码和数据片段收集并组合成为一个单一文件的过程，这个文 件可被加载（复制）到内存并执行。链接可以执行于编译时（compile time），也就是在源代 码被翻译成机器代码时；也可以执行于加载时（load time），也就是在程序被加载器（load- er）加载到内存并执行时；甚至执行于运行时（run"
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/008-第7章-链接.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 499-535"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

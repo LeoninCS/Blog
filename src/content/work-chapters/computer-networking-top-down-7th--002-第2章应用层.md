@@ -1,6 +1,7 @@
 ---
 title: "第2章应用层"
 description: "第2章 Computer Networking: A Top-Down Approach, Seventh Edition 应用层 网络应用是计算机网络存在的理由，如果我们不能构想出任何有用的应用，也就没有 任何必要去设计支持它们的网络协议了。自因特网全面发展以来，的确已开发出众多有用 的、有趣的网络应用。这些应用程序已经成为因特网成功的驱动力，激励人们在家"
+readerUrl: "/books/computer-networking-top-down-7th/002-第2章应用层.pdf"
 sourceUrl: "授权 PDF：计算机网络 自顶向下方法（第七版） 中文版.pdf，页 72-138"
 workSlug: "computer-networking-top-down-7th"
 workTitle: "计算机网络：自顶向下方法（第七版）"

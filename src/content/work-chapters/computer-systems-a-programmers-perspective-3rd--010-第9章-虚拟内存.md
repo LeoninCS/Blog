@@ -1,6 +1,7 @@
 ---
 title: "第9章 虚拟内存"
 description: "A 第9章 PT 虚拟内存 ER 9 一个系统中的进程是与其他进程共享 CPU 和主存资源的。然而，共享主存会形成一 些特的挑战。随着对CPU 需求的增长，进程以某种合理的平滑方式慢了下来。但是如 果太多的进程需要太多的内存，那么它们中的一些就根本无法运行。当一个程序没有空间 可用时，那就是它运气不好了。内存还很容易被破坏。如果某个进程不小心写了另一个进 程"
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/010-第9章-虚拟内存.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 594-656"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

@@ -1,6 +1,7 @@
 ---
 title: "第9章多媒体网络"
 description: "第9章 Computer Networking: A Top-Down Approach, Seventh Edition 多媒体网络 位于世界各个角落的人们懒散地靠坐在床上或乘坐公共汽车和地铁打发时间时，眼下 都使用因特网来按需观看电影和电视节目。因特网电影和电视分发公司（如北美的 Netllix 和 Amazon、中国的“优酷”（Youku）和“看看”（"
+readerUrl: "/books/computer-networking-top-down-7th/009-第9章多媒体网络.pdf"
 sourceUrl: "授权 PDF：计算机网络 自顶向下方法（第七版） 中文版.pdf，页 457-529"
 workSlug: "computer-networking-top-down-7th"
 workTitle: "计算机网络：自顶向下方法（第七版）"

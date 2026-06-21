@@ -1,6 +1,7 @@
 ---
 title: "第5章 优化程序性能"
 description: "H 第5章 P 优化程序性能 E R 写程序最主要的目标就是使它在所有可能的情况下都正确工作。一个运行得很快但是 给出错误结果的程序没有任何用处。程序员必须写出清晰简洁的代码，这样做不仅是为了 自己能够看懂代码，也是为了在检查代码和今后需要修改代码时，其他人能够读懂和理解 代码。 另一方面，在很多情况下，让程序运行得快也是一个重要的考虑因素。如果一个程序 要"
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/006-第5章-优化程序性能.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 376-433"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

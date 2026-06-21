@@ -1,6 +1,7 @@
 ---
 title: "第10章 系统级I/O"
 description: "第10章 HAP 系统级 1/O R 10 输入/输出（1/0）是在主存和外部设备（例如磁盘驱动器、终端和网络）之间复制数据的过 程。输入操作是从1/0设备复制数据到主存，而输出操作是从主存复制数据到1/0设备。 所有语言的运行时系统都提供执行I/0的较高级别的工具。例如，ANSI C提供标准 1/0库，包含像 printf和 scanf这样执行带缓冲区的1"
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/011-第10章-系统级i-o.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 657-676"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

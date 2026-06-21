@@ -1,6 +1,7 @@
 ---
 title: "第12章 并发编程"
 description: "第12章 P 并发编程 R 12 正如我们在第8章学到的，如果逻辑控制流在时间上重叠，那么它们就是并发的 （concurrent）。这种常见的现象称并发（concurrency），出现在计算机系统的许多不同层 面上。硬件异常处理程序、进程和 Linux 信号处理程序都是大家很熟悉的例子。 到目前为止，我们主要将并发看做是一种操作系统内核用来运行多个应用程序的"
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/013-第12章-并发编程.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 716-773"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

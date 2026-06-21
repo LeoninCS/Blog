@@ -1,6 +1,7 @@
 ---
 title: "第一章 计算机系统漫游"
 description: "第1章 A PTER 计算机系统漫游 计算机系统是由硬件和系统软件组成的，它们共同工作来运行应用程序。虽然系统的 具体实现方式随着时间不断变化，但是系统内在的概念却没有改变。所有计算机系统都有 相似的硬件和软件组件，它们又执行着相似的功能。一些程序员希望深入了解这些组件是 如何工作的以及这些组件是如何影响程序的正确性和性能的，以此来提高自身的技能。本 书便是"
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/002-第一章-计算机系统漫游.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 36-56"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

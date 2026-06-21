@@ -1,6 +1,7 @@
 ---
 title: "第4章 处理器体系结构"
 description: "第4章 ER 处理器体系结构 现代微处理器可以称得上是人类创造出的最复杂的系统之一。一块手指甲大小的硅片 上，可以容纳一个完整的高性能处理器、大的高速缓存，以及用来连接到外部设备的逻辑 电路。从性能上来说，今天在一块芯片上实现的处理器已经使20年前价值 1000万美元、 房间那么大的超级计算机相形见绌了。即使是在像手机、导航系统和可编程恒温器这样的 日常设备"
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/005-第4章-处理器体系结构.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 278-375"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

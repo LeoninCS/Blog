@@ -1,6 +1,7 @@
 ---
 title: "第8章 异常控制流"
 description: "• 第8章 P 异常控制流 E R 8 从给处理器加电开始，直到你断电为止，程序计数器假设一个值的序列 Qo,Q1， ⋯，Qn-1 其中，每个 ak是某个相应的指令1的地址。每次从ak到ak+1的过渡称力控制转移（control transfer）。这样的控制转移序列叫做处理器的控制流（flow of control 或 control flow）。 最简单"
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/009-第8章-异常控制流.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 536-593"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

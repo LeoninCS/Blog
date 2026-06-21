@@ -35,6 +35,7 @@ const workChapter = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    readerUrl: z.string().optional(),
     sourceUrl: z.string(),
     workSlug: z.string(),
     workTitle: z.string(),

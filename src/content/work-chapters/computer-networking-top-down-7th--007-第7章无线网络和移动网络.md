@@ -1,6 +1,7 @@
 ---
 title: "第7章无线网络和移动网络"
 description: "第7章| Computer Networking: A Top-Down Approach, Seventh Edition 无线网络和移动网络 在电话技术领域，过去的20年无疑可认为是蜂窝电话技术的黄金发展期。全球范围 的移动蜂窝电话用户数量从1993年的3400 万增长到2014年的超过70亿，同时蜂窝电话 用户数量现在也超过了有线电话用户数量。现在移动"
+readerUrl: "/books/computer-networking-top-down-7th/007-第7章无线网络和移动网络.pdf"
 sourceUrl: "授权 PDF：计算机网络 自顶向下方法（第七版） 中文版.pdf，页 356-402"
 workSlug: "computer-networking-top-down-7th"
 workTitle: "计算机网络：自顶向下方法（第七版）"

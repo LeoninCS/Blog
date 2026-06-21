@@ -1,6 +1,7 @@
 ---
 title: "第11章 网络编程"
 description: "第11章 P TE 网络编程 R 网络应用随处可见。任何时候浏览 Web、发送email 信息或是玩在线游戏，你就正在 使用网络应用程序。有趣的是，所有的网络应用都是基于相同的基本编程模型，有着相似 的整体逻辑结构，并且依赖相同的编程接口。 网络应用依赖于很多在系统研究中已经学习过的概念。例如，进程、信号、字节顺 序、内存映射以及动态内存分配，都扮演着重要的"
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/012-第11章-网络编程.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 677-715"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

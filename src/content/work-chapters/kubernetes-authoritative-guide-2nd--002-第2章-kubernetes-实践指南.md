@@ -1,6 +1,7 @@
 ---
 title: "第2章 Kubernetes 实践指南"
 description: "第2章 Kubernetes 实践指南 本章将从 Kubernetes 的系统安装开始，逐步介绍 Kuberetes 的服务相关配置、命令行工具 kubectl 的使用详解，然后通过大量案例实践对 Kubernetes 最核心的容器和微服务架构的概念和 用法进行详细说明。 2.1 Kubernetes 安装与配置 2.1.1 安装 Kubernetes Ku"
+readerUrl: "/books/kubernetes-authoritative-guide-2nd/002-第2章-kubernetes-实践指南.pdf"
 sourceUrl: "授权 PDF：Kubernetes权威指南：从Docker到Kubernetes实践全接触（第2版).pdf，页 56-177"
 workSlug: "kubernetes-authoritative-guide-2nd"
 workTitle: "Kubernetes 权威指南：从 Docker 到 Kubernetes 实践全接触（第 2 版）"

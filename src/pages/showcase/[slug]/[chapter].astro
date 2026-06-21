@@ -22,6 +22,7 @@ const siblings = (await getCollection('workChapter'))
 const currentIndex = siblings.findIndex((item) => item.id === chapter.id);
 const previous = currentIndex > 0 ? siblings[currentIndex - 1] : undefined;
 const next = currentIndex >= 0 && currentIndex < siblings.length - 1 ? siblings[currentIndex + 1] : undefined;
+const readerUrl = chapter.data.readerUrl;
 ---
 
 <BaseLayout title={chapter.data.title} description={chapter.data.description}>
@@ -39,8 +40,25 @@ const next = currentIndex >= 0 && currentIndex < siblings.length - 1 ? siblings[
 
     <div class="rule"></div>
 
-    <div class="post-article">
-      <Content />
+    <div class:list={['post-article', readerUrl && 'ebook-article']}>
+      {readerUrl && (
+        <section class="ebook-reader" aria-label={`${chapter.data.title} PDF 阅读器`}>
+          <div class="ebook-reader-toolbar">
+            <span>原版 PDF</span>
+            <a href={readerUrl} target="_blank" rel="noreferrer">打开 PDF</a>
+          </div>
+          <iframe
+            src={readerUrl}
+            title={`${chapter.data.title} PDF 阅读器`}
+            loading="lazy"
+          ></iframe>
+        </section>
+      )}
+
+      <section class={readerUrl ? 'ocr-text' : undefined}>
+        {readerUrl && <h2>OCR 文本</h2>}
+        <Content />
+      </section>
 
       <nav class="chapter-nav" aria-label="章节导航">
         {previous ? (

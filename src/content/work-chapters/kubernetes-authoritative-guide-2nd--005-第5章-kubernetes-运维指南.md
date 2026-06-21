@@ -1,6 +1,7 @@
 ---
 title: "第5章 Kubernetes 运维指南"
 description: "第5章 Kubernetes 运维指南 为了让容器应用在 Kubernetes 集群中运行得更加有效，对 Kubernetes 集群本身也需要进 行相应的配置和管理。本章将从 Kubernetes 集群管理、高级案例及 Trouble Shooting 等方面对 Kubernetes 集群的运维和查错进行详细说明，最后对 Kubernetes 1.3版本开发"
+readerUrl: "/books/kubernetes-authoritative-guide-2nd/005-第5章-kubernetes-运维指南.pdf"
 sourceUrl: "授权 PDF：Kubernetes权威指南：从Docker到Kubernetes实践全接触（第2版).pdf，页 305-408"
 workSlug: "kubernetes-authoritative-guide-2nd"
 workTitle: "Kubernetes 权威指南：从 Docker 到 Kubernetes 实践全接触（第 2 版）"

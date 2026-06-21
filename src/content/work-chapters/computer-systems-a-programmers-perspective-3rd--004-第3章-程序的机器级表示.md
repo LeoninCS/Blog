@@ -1,6 +1,7 @@
 ---
 title: "第3章 程序的机器级表示"
 description: "H A 第3 章 PT ER 程序的机器级表示 3 计算机执行机器代码，用字节序列编码低级的操作，包括处理数据、管理内存、读写 存储设备上的数据，以及利用网络通信。编译器基于编程语言的规则、目标机器的指令集 和操作系统遵循的惯例，经过一系列的阶段生成机器代码。GCCC语言编译器以汇编代码 的形式产生输出，汇编代码是机器代码的文本表示，给出程序中的每一条指令。"
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/004-第3章-程序的机器级表示.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 144-277"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

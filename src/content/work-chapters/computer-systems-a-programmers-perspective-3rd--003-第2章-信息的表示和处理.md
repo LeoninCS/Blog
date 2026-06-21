@@ -1,6 +1,7 @@
 ---
 title: "第2章 信息的表示和处理"
 description: "第2章 P 信息的表示和处理 2 现代计算机存储和处理的信息以二值信号表示。这些微不足道的二进制数字，或者称 为位（bit），形成了数字草命的基础。大家熟悉并使用了 1000多年的十进制（以10为基数） 起源于印度，在12世纪被阿拉伯数学家改进，并在13世纪被意大利数学家 Leonardo Pisano（大约公元 1170—1250，更为大家所熟知的名字是 "
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/003-第2章-信息的表示和处理.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 57-143"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

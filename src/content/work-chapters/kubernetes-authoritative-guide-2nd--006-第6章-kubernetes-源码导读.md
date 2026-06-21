@@ -1,6 +1,7 @@
 ---
 title: "第6章 Kubernetes 源码导读"
 description: "第6章 Kubernetes 源码导读 6.1 Kubernetes 源码结构和编译步骤 Kubernetes 的源码现在托管在 GitHub 上，地址为 https://github.com/googlecloudplatform/ kubernetes。 编译脚本存放在build 子目录下，在 Linux 环境（可以是虚拟机）中执行如下命令即可完成 代码"
+readerUrl: "/books/kubernetes-authoritative-guide-2nd/006-第6章-kubernetes-源码导读.pdf"
 sourceUrl: "授权 PDF：Kubernetes权威指南：从Docker到Kubernetes实践全接触（第2版).pdf，页 409-519"
 workSlug: "kubernetes-authoritative-guide-2nd"
 workTitle: "Kubernetes 权威指南：从 Docker 到 Kubernetes 实践全接触（第 2 版）"

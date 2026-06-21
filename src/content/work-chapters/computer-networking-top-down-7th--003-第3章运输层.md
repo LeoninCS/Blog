@@ -1,6 +1,7 @@
 ---
 title: "第3章运输层"
 description: "第3章 Computer Networking: A Top-Down Approach, Seventh Edition 运输层位于应用层和网络层之间，是分层的网络体系结构的重要部分。该层为运行在 不同主机上的应用进程提供直接的通信服务起着至关重要的作用。我们在本章采用的教学 方法是，交替地讨论运输层的原理和这些原理在现有的协议中是如何实现的。与往常一 样"
+readerUrl: "/books/computer-networking-top-down-7th/003-第3章运输层.pdf"
 sourceUrl: "授权 PDF：计算机网络 自顶向下方法（第七版） 中文版.pdf，页 139-215"
 workSlug: "computer-networking-top-down-7th"
 workTitle: "计算机网络：自顶向下方法（第七版）"

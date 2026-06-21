@@ -1,6 +1,7 @@
 ---
 title: "第1章计算机网络和因特网"
 description: "|第1章 Computer Networking: A Top-Down Approach, Seventh Edition 计算机网络和因特网 今天的因特网无疑是有史以来由人类创造、精心设计的最大系统，该系统具有数以亿 计的相连的计算机、通信链路和交换机，有数十亿的用便携计算机、平板电脑和智能手机 连接的用户，并且还有一批与因特网连接的“物品”，包括游戏机"
+readerUrl: "/books/computer-networking-top-down-7th/001-第1章计算机网络和因特网.pdf"
 sourceUrl: "授权 PDF：计算机网络 自顶向下方法（第七版） 中文版.pdf，页 19-71"
 workSlug: "computer-networking-top-down-7th"
 workTitle: "计算机网络：自顶向下方法（第七版）"

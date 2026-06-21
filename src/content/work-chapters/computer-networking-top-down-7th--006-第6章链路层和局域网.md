@@ -1,6 +1,7 @@
 ---
 title: "第6章链路层和局域网"
 description: "|第6章 Computer Networking: A Top-Down Approach, Seventh Edition 链路层和局域网 在上一章中，我们学习了网络层提供的任意两台主机之间的通信服务。在两台主机之 间，数据报跨越一系列通信链路传输，一些是有线链路，而一些是无线链路，从源主机起 始，通过一系列分组交换机（交换机和路由器），在目的主机结束。当"
+readerUrl: "/books/computer-networking-top-down-7th/006-第6章链路层和局域网.pdf"
 sourceUrl: "授权 PDF：计算机网络 自顶向下方法（第七版） 中文版.pdf，页 303-355"
 workSlug: "computer-networking-top-down-7th"
 workTitle: "计算机网络：自顶向下方法（第七版）"

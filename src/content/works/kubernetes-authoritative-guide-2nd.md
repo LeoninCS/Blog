@@ -1,6 +1,6 @@
 ---
 title: "Kubernetes 权威指南：从 Docker 到 Kubernetes 实践全接触（第 2 版）"
-description: "Kubernetes 与 Docker 实践指南，覆盖基础概念、安装配置、资源对象、集群管理与应用部署。 本地已从授权 PDF OCR 导入 6 个章节。"
+description: "Kubernetes 与 Docker 实践指南，覆盖基础概念、安装配置、资源对象、集群管理与应用部署。 已按章节导入为在线电子书。"
 sourceUrl: "授权 PDF：Kubernetes权威指南：从Docker到Kubernetes实践全接触（第2版).pdf"
 stack: "Kubernetes · Docker · 容器实践"
 badge: "PDF"
@@ -9,7 +9,7 @@ chapterCount: 6
 categories: ["云原生", "Kubernetes"]
 tags: ["Kubernetes", "Docker", "容器", "集群管理"]
 ---
-这是从授权 PDF 迁移到博客内的 OCR 版资料集。正文按目录拆分为本地页面，便于阅读、检索和后续维护。
+这是从授权 PDF 迁移到博客内的在线电子书。正文按目录拆分为本地章节，页面保留 PDF 原版版式，并提供 OCR 文本辅助检索。
 
 ## 本地章节
 

@@ -1,6 +1,7 @@
 ---
 title: "第1章 Kubernetes 入门"
 description: "第1章 Kubernetes 入门 1.1 Kubernetes 是什么 Kubernetes 是什么？ 首先，它是一个全新的基于容器技术的分布式架构领先方案。这个方案虽然还很新，但它 是谷歌十几年以来大规模应用容器技术的经验积累和升华的一个重要成果。确切地说， Kubernetes 是谷歌严格保密十几年的秘密武器—Borg 的一个开源版本。Borg 是谷歌"
+readerUrl: "/books/kubernetes-authoritative-guide-2nd/001-第1章-kubernetes-入门.pdf"
 sourceUrl: "授权 PDF：Kubernetes权威指南：从Docker到Kubernetes实践全接触（第2版).pdf，页 14-55"
 workSlug: "kubernetes-authoritative-guide-2nd"
 workTitle: "Kubernetes 权威指南：从 Docker 到 Kubernetes 实践全接触（第 2 版）"

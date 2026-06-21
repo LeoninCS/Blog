@@ -1,6 +1,7 @@
 ---
 title: "第4章网络层：数据平面"
 description: "第4章| Computer Networking: A Top-Down Approach, Seventh Edition 网络层：数据平面 在前一章中我们学习了运输层依赖于网络层的主机到主机的通信服务，提供各种形式 的进程到进程的通信。我们也学习了运输层工作时不具备任何有关网络层实际实现这种服 务的知识。因此也许你现在想知道，这种主机到主机通信服务的真实"
+readerUrl: "/books/computer-networking-top-down-7th/004-第4章网络层-数据平面.pdf"
 sourceUrl: "授权 PDF：计算机网络 自顶向下方法（第七版） 中文版.pdf，页 216-259"
 workSlug: "computer-networking-top-down-7th"
 workTitle: "计算机网络：自顶向下方法（第七版）"

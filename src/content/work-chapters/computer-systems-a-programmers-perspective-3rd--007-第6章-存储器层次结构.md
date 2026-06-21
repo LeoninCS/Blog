@@ -1,6 +1,7 @@
 ---
 title: "第6章 存储器层次结构"
 description: "第6章 A 存储器层次结构 ER 6 到目前为止，在对系统的研究中，我们依赖于一个简单的计算机系统模型，CPU 执 行指令，而存储器系统为CPU 存放指令和数据。在简单模型中，存储器系统是一个线性 的字节数组，而CPU能够在一个常数时间内访问每个存储器位置。虽然迄今为止这都是 一个有效的模型，但是它没有反映现代系统实际工作的方式。 实际上，存储器系统（mem"
+readerUrl: "/books/computer-systems-a-programmers-perspective-3rd/007-第6章-存储器层次结构.pdf"
 sourceUrl: "授权 PDF：深入理解计算机系统 原书第3版 ,兰德尔E.布莱恩特 ,P737 ,2016.11.pdf，页 434-498"
 workSlug: "computer-systems-a-programmers-perspective-3rd"
 workTitle: "深入理解计算机系统（原书第 3 版）"

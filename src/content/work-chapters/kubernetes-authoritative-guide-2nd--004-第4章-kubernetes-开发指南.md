@@ -1,6 +1,7 @@
 ---
 title: "第4章 Kubernetes 开发指南"
 description: "第4章 Kubernetes 开发指南 本章将引入 REST 的概念，详细说明 Kubernetes API，并举例说明如何基于 Jersey 和 Fabric8 框架访问 Kubernetes API，深入分析基于这两个框架访问 Kubernetes API 的优缺点。下面从 REST 开始说起。 4.1 REST 简述 REST （Representat"
+readerUrl: "/books/kubernetes-authoritative-guide-2nd/004-第4章-kubernetes-开发指南.pdf"
 sourceUrl: "授权 PDF：Kubernetes权威指南：从Docker到Kubernetes实践全接触（第2版).pdf，页 260-304"
 workSlug: "kubernetes-authoritative-guide-2nd"
 workTitle: "Kubernetes 权威指南：从 Docker 到 Kubernetes 实践全接触（第 2 版）"

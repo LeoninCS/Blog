@@ -1,6 +1,7 @@
 ---
 title: "第5章网络层：控制平面"
 description: "第5章 Computer Networking: A Top-Down Approach, Seventh Edition 网络层：控制平面 在本章中，我们将通过包含网络层的控制平面组件来完成我们的网络层之旅。控制平 面作为一种网络范围的逻辑，不仅控制沿着从源主机到目的主机的端到端路径间的路由器 如何转发数据报，而且控制网络层组件和服务如何配置和管理。在5."
+readerUrl: "/books/computer-networking-top-down-7th/005-第5章网络层-控制平面.pdf"
 sourceUrl: "授权 PDF：计算机网络 自顶向下方法（第七版） 中文版.pdf，页 260-302"
 workSlug: "computer-networking-top-down-7th"
 workTitle: "计算机网络：自顶向下方法（第七版）"

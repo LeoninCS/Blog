@@ -1,6 +1,7 @@
 ---
 title: "第3章 Kubernetes 核心原理"
 description: "第3章 Kubernetes 核心原理 本章对 Kubernetes 的核心原理进行深入分析，首先从 API Server 的访问开始讲起，然后分 析 Master 节点上 Controller Manager 各个组件的功能实现，以及 Scheduler 预选算法和优选算法。 接下来讲解 Node 节点上的 kubelet 和 kube-proxy 组件的"
+readerUrl: "/books/kubernetes-authoritative-guide-2nd/003-第3章-kubernetes-核心原理.pdf"
 sourceUrl: "授权 PDF：Kubernetes权威指南：从Docker到Kubernetes实践全接触（第2版).pdf，页 178-259"
 workSlug: "kubernetes-authoritative-guide-2nd"
 workTitle: "Kubernetes 权威指南：从 Docker 到 Kubernetes 实践全接触（第 2 版）"

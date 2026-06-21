@@ -1,6 +1,7 @@
 ---
 title: "第8章计算机网络中的安全"
 description: "第8章 Computer Networking: A Top-Down Approach, Seventh Edition 计算机网络中的安全 早在1.6 节我们就描述了某些非常盛行和危险的因特网攻击，包括恶意软件攻击、拒 绝服务、嗅探、源伪装以及报文修改和删除。尽管我们已经学习了有关计算机网络的大量 知识，但仍然没有考察如何使网络安全，使其免受那些攻击的威"
+readerUrl: "/books/computer-networking-top-down-7th/008-第8章计算机网络中的安全.pdf"
 sourceUrl: "授权 PDF：计算机网络 自顶向下方法（第七版） 中文版.pdf，页 403-456"
 workSlug: "computer-networking-top-down-7th"
 workTitle: "计算机网络：自顶向下方法（第七版）"
