@@ -15,14 +15,15 @@ export async function getStaticPaths() {
 }
 
 const { chapter } = Astro.props;
-const { Content } = await render(chapter);
+const readerUrl = chapter.data.readerUrl;
+const renderedChapter = readerUrl ? undefined : await render(chapter);
+const Content = renderedChapter?.Content;
 const siblings = (await getCollection('workChapter'))
   .filter((item) => item.data.workSlug === chapter.data.workSlug)
   .sort((a, b) => a.data.order - b.data.order);
 const currentIndex = siblings.findIndex((item) => item.id === chapter.id);
 const previous = currentIndex > 0 ? siblings[currentIndex - 1] : undefined;
 const next = currentIndex >= 0 && currentIndex < siblings.length - 1 ? siblings[currentIndex + 1] : undefined;
-const readerUrl = chapter.data.readerUrl;
 ---
 
 <BaseLayout title={chapter.data.title} description={chapter.data.description}>
@@ -30,7 +31,7 @@ const readerUrl = chapter.data.readerUrl;
     <header class="post-header">
       <a class="back-link" href={`/showcase/${chapter.data.workSlug}/`}>← {chapter.data.workTitle}</a>
       <h1>{chapter.data.title}</h1>
-      <p>{chapter.data.description}</p>
+      {!readerUrl && <p>{chapter.data.description}</p>}
       <div class="post-detail-meta">
         <span>{chapter.data.workTitle}</span>
         <span>·</span>
@@ -55,10 +56,7 @@ const readerUrl = chapter.data.readerUrl;
         </section>
       )}
 
-      <section class={readerUrl ? 'ocr-text' : undefined}>
-        {readerUrl && <h2>OCR 文本</h2>}
-        <Content />
-      </section>
+      {!readerUrl && Content && <Content />}
 
       <nav class="chapter-nav" aria-label="章节导航">
         {previous ? (

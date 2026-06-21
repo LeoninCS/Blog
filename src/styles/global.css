@@ -797,12 +797,6 @@ video {
   width: min(100%, 960px);
 }
 
-.ocr-text {
-  border-top: 1px solid var(--hairline);
-  margin-top: 34px;
-  padding-top: 8px;
-}
-
 .chapter-nav {
   border-top: 1px solid var(--hairline);
   display: grid;

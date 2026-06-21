@@ -9,7 +9,7 @@ chapterCount: 6
 categories: ["云原生", "Kubernetes"]
 tags: ["Kubernetes", "Docker", "容器", "集群管理"]
 ---
-这是从授权 PDF 迁移到博客内的在线电子书。正文按目录拆分为本地章节，页面保留 PDF 原版版式，并提供 OCR 文本辅助检索。
+这是从授权 PDF 迁移到博客内的在线电子书。正文按目录拆分为本地章节，页面保留 PDF 原版版式。
 
 ## 本地章节
 
