@@ -96,27 +96,27 @@ git init
 
 **由于各个主题文件目录不同，配置方法也有所差异，但大体相同，可借助AI帮助配置，本文仅展示stack主题的配置**
 
-![](/blog-assets/hugo-github-blog/5bfae92f-bafc-4a8f-b461-9895dcd72719.png)
+![5bfae92f-bafc-4a8f-b461-9895dcd72719](/blog-assets/hugo-github-blog/5bfae92f-bafc-4a8f-b461-9895dcd72719.png)
 
 选择一个点击进去，点击demo即可看到主题的效果,点击download即可跳转到github仓库
 
-![](/blog-assets/hugo-github-blog/42a78ef3-7bb6-4fb8-9bb8-f69e26ecb325.png)
+![42a78ef3-7bb6-4fb8-9bb8-f69e26ecb325](/blog-assets/hugo-github-blog/42a78ef3-7bb6-4fb8-9bb8-f69e26ecb325.png)
 
 点击tag
 
-![](/blog-assets/hugo-github-blog/1543b697-376f-4cf4-9860-9ad4bc12ed07.png)
+![1543b697-376f-4cf4-9860-9ad4bc12ed07](/blog-assets/hugo-github-blog/1543b697-376f-4cf4-9860-9ad4bc12ed07.png)
 
 下载最新版本
 
-![](/blog-assets/hugo-github-blog/20383ad5-d0c6-4240-9634-9bf6ff465dea.png)
+![20383ad5-d0c6-4240-9634-9bf6ff465dea](/blog-assets/hugo-github-blog/20383ad5-d0c6-4240-9634-9bf6ff465dea.png)
 
 下载源码
 
-![](/blog-assets/hugo-github-blog/20de5273-a28d-4599-95db-6478e0d8f843.png)
+![20de5273-a28d-4599-95db-6478e0d8f843](/blog-assets/hugo-github-blog/20de5273-a28d-4599-95db-6478e0d8f843.png)
 
 解压缩到themes文件夹，并将名字中的版本号去掉，效果如下
 
-![](/blog-assets/hugo-github-blog/01f95210-4333-46e6-bc09-d24367b6468d.png)
+![01f95210-4333-46e6-bc09-d24367b6468d](/blog-assets/hugo-github-blog/01f95210-4333-46e6-bc09-d24367b6468d.png)
 
 ### 配置主题
 

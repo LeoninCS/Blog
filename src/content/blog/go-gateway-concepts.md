@@ -34,11 +34,11 @@ tags: ["微服务","API网关","Golang"]
 
 **单体架构图**
 
-![](/blog-assets/go-gateway-concepts/8634272206cf40b9a4ed21dcdffe84df.png)
+![8634272206cf40b9a4ed21dcdffe84df](/blog-assets/go-gateway-concepts/8634272206cf40b9a4ed21dcdffe84df.png)
 
 **微服务架构图**
 
-![](/blog-assets/go-gateway-concepts/6329b3d4701b4c26a3347de2616afcec.png)
+![6329b3d4701b4c26a3347de2616afcec](/blog-assets/go-gateway-concepts/6329b3d4701b4c26a3347de2616afcec.png)
 
 ### 微服务的优势
 
@@ -62,7 +62,7 @@ tags: ["微服务","API网关","Golang"]
 
 > 这里我们先提供一个架构图
 
-![](/blog-assets/go-gateway-concepts/740aa009a88d4cbc86815eb0d5888988.png)
+![740aa009a88d4cbc86815eb0d5888988](/blog-assets/go-gateway-concepts/740aa009a88d4cbc86815eb0d5888988.png)
 
 ### 1.统一入口（API聚合）
 
@@ -140,7 +140,7 @@ tags: ["微服务","API网关","Golang"]
 
 > 微服务网关与云结合
 
-![](/blog-assets/go-gateway-concepts/d55a46372a454d26b290d1d44bc985cf.png)
+![d55a46372a454d26b290d1d44bc985cf](/blog-assets/go-gateway-concepts/d55a46372a454d26b290d1d44bc985cf.png)
 
 **未来已来**：当网关能力完全云服务化后，企业将不再关心“网关在哪里”，只需定义“我要什么功能”——这正是云计算终极目标的体现。建议企业优先采用云厂商全托管网关服务，将精力聚焦在业务创新而非基础设施运维。
 
