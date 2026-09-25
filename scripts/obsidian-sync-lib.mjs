@@ -1,4 +1,10 @@
 import { basename, dirname, extname, posix } from 'node:path';
+import { toString } from 'mdast-util-to-string';
+import remarkGfm from 'remark-gfm';
+import remarkParse from 'remark-parse';
+import { unified } from 'unified';
+
+const markdownParser = unified().use(remarkParse).use(remarkGfm);
 
 export function parseFrontmatter(markdown) {
   if (!markdown.startsWith('---')) {
@@ -213,14 +219,16 @@ export function buildObsidianNote({ markdown, sourcePath }) {
 }
 
 function firstParagraph(body) {
-  return body
+  const markdown = body
     .replace(/!\[\[[^\]]+\]\]/g, '')
-    .replace(/\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|([^\]]+))?\]\]/g, (_, target, alias) => alias || target)
-    .split(/\n{2,}/)
-    .map((part) => part.replace(/^#+\s*/, '').trim())
-    .find((part) => part && !part.startsWith('```'))
-    ?.replace(/\s+/g, ' ')
-    .slice(0, 160);
+    .replace(/\[\[([^\]|#]+)(?:#[^\]|]+)?(?:\|([^\]]+))?\]\]/g, (_, target, alias) => alias || target);
+
+  // Only prose belongs in an excerpt; tables and code stay in the article body.
+  for (const node of markdownParser.parse(markdown).children) {
+    if (node.type !== 'paragraph') continue;
+    const text = toString(node, { includeImageAlt: false, includeHtml: false }).replace(/\s+/g, ' ').trim();
+    if (text) return text.slice(0, 160);
+  }
 }
 
 function normalizeList(value) {
