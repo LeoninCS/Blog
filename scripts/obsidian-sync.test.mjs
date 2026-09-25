@@ -122,3 +122,66 @@ test('builds Obsidian note from Astro post and maps hosted assets', () => {
   assert.match(result.markdown, /cover: "old-post\/face\.png"/);
   assert.match(result.markdown, /!\[\[old-post\/demo chart\.png\|流程图\]\]/);
 });
+
+const practiceTable = [
+  '| 题目 | 高频度 | 难度 | 主要考点 |',
+  '| --- | --- | --- | --- |',
+  '| LRU Cache | 高 | 中 | map + 双向链表 |',
+  '| singleflight 简化版 | 高 | 中 | 请求合并 |'
+].join('\n');
+
+function buildExcerptPost(body, description) {
+  return buildAstroPost({
+    markdown: [
+      '---',
+      'publish: true',
+      'title: "Go 练习"',
+      ...(description ? [`description: "${description}"`] : []),
+      '---',
+      '',
+      body
+    ].join('\n'),
+    sourcePath: 'Blog/Go 练习.md'
+  });
+}
+
+test('table-only posts fall back to the title without changing the table', () => {
+  const result = buildExcerptPost(practiceTable);
+  const { data, body } = parseFrontmatter(result.markdown);
+
+  assert.equal(data.description, 'Go 练习');
+  assert.equal(body.trim(), practiceTable);
+});
+
+test('extracts prose after a table, with or without outer pipes', () => {
+  for (const table of [practiceTable, practiceTable.replace(/^\| | \|$/gm, '')]) {
+    const result = buildExcerptPost(`# Go 练习\n\n${table}\n\n缓存与并发练习。`);
+    assert.equal(parseFrontmatter(result.markdown).data.description, '缓存与并发练习。');
+  }
+});
+
+test('skips headings, images and code blocks containing blank lines', () => {
+  for (const fence of ['```', '~~~']) {
+    const result = buildExcerptPost([
+      '# Go 练习',
+      '',
+      '![封面](cover.png)',
+      '',
+      '![[diagram.png]]',
+      '',
+      `${fence}go`,
+      'package main',
+      '',
+      'func main() {}',
+      fence,
+      '',
+      '学习 **Go**、`channel` 和 [并发](https://example.com)，参考 [[笔记|实践笔记]]。'
+    ].join('\n'));
+    assert.equal(parseFrontmatter(result.markdown).data.description, '学习 Go、channel 和 并发，参考 实践笔记。');
+  }
+});
+
+test('preserves an explicit description for table-only posts', () => {
+  const result = buildExcerptPost(practiceTable, '缓存与并发练习。');
+  assert.equal(parseFrontmatter(result.markdown).data.description, '缓存与并发练习。');
+});

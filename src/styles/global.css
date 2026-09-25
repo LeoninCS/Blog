@@ -740,6 +740,61 @@ video {
   margin: 1.6em auto;
 }
 
+.post-article .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25em 0;
+}
+
+.post-article table {
+  border: 1px solid var(--hairline);
+  border-collapse: collapse;
+  border-radius: 6px;
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 1.5em 0;
+  max-width: 100%;
+  overflow-x: auto;
+  width: max-content;
+}
+
+.post-article th,
+.post-article td {
+  border-bottom: 1px solid var(--hairline);
+  padding: 12px 16px;
+  vertical-align: top;
+}
+
+.post-article th:not([align]),
+.post-article td:not([align]) {
+  text-align: left;
+}
+
+.post-article th {
+  background: var(--accent-soft);
+  color: hsl(var(--theme-text));
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.post-article td:first-child {
+  white-space: nowrap;
+}
+
+.post-article td:last-child {
+  min-width: 16em;
+}
+
+.post-article tbody tr:nth-child(even) {
+  background: var(--paper);
+}
+
+.post-article tbody tr:last-child td {
+  border-bottom: 0;
+}
+
 .chapter-list {
   list-style: decimal-leading-zero;
 }
