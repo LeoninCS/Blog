@@ -3,7 +3,7 @@ import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 
 export default defineConfig({
-  site: 'https://xianchaoqian.com',
+  site: 'https://blockblog.top',
   publicDir: './static',
   devToolbar: {
     enabled: false
