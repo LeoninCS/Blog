@@ -2,6 +2,8 @@
 
 布洛克琴的个人 Blog，使用 Astro 构建，记录学习笔记、技术实践、项目复盘和生活观察。
 
+在线博客：[blockblog.top](https://blockblog.top/)。
+
 ## 技术栈
 
 - Astro
