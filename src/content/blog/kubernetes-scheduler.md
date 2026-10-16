@@ -84,7 +84,7 @@ Watch API Server，将尚未分配节点的 Pod 放入调度队列。<br>（邮�
 
 检查的信息：
 
-![Scheduler 过滤阶段的检查信息](/blog-assets/kubernetes-scheduler/image-01.png)
+![Scheduler 过滤阶段的检查信息](/blog-assets/kubernetes-scheduler/filter-checks.png)
 
 ### 打分｜选出更合适的节点
 
@@ -94,7 +94,7 @@ Watch API Server，将尚未分配节点的 Pod 放入调度队列。<br>（邮�
 
 打分规则：
 
-![Scheduler 打分插件与评分规则](/blog-assets/kubernetes-scheduler/image-02.png)
+![Scheduler 打分插件与评分规则](/blog-assets/kubernetes-scheduler/scoring-rules.png)
 
 按照不同的配置权重
 
@@ -139,7 +139,7 @@ clientConnection：连接 API Server 的认证配置，kubeconfig 路径按实�
 
 默认权重如下
 
-![Scheduler 默认评分插件权重](/blog-assets/kubernetes-scheduler/image-03.png)
+![Scheduler 默认评分插件权重](/blog-assets/kubernetes-scheduler/default-score-weights.png)
 
 ## 05  从选中节点到完成绑定
 
